@@ -40,7 +40,7 @@ function CustomInput({ count, onChangeInputValue, onFillEnd }) {
 				payload: {
 					text: keyType.current === "Backspace" ? "" : e.target.value,
 					index:
-						e === "Backspace" && !inputs[activeIndex].value
+						e === "Backspace" && !inputs[activeIndex].value && activeIndex > 0
 							? activeIndex - 1
 							: activeIndex,
 				},
